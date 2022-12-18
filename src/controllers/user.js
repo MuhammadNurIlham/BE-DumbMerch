@@ -112,7 +112,6 @@ exports.updatedUser = async (req, res) => {
     }
 };
 
-
 exports.deleteUser = async (req, res) => {
     try {
         const {id} = req.params;
@@ -127,8 +126,8 @@ exports.deleteUser = async (req, res) => {
                 error: {
                     message: `User Data with ID: ${id} Failed to Delete because Data was not found`
                 }
-            })
-        }
+            });
+        };
 
         res.send({
             status: "Success",
